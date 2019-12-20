@@ -14,17 +14,12 @@ class Stack
         @data = nil
     end
 
-    # Push a value onto the stack
     def push(value)
         @data = LinkedListNode.new(value, @data)
     end
 
-    # Pop an item off the stack.
-    # Remove the last item that was pushed onto the
-    # stack and return the value to the user
     def pop
         return nil if @data.nil?
-        # I RETURN A VALUE
         # save value @data, (like @data.value)
         #change @data to the next node on list
         #else return @data.value
@@ -34,17 +29,14 @@ class Stack
 end
 
     def reverse_list(list)
-        # ADD CODE HERE
         reversing = Stack.new
 
         while list
-            # ADD CODE HERE
             reversing.push(list.value)
             list = list.next_node
 
         end
         reversing.data
-        # ADD CODE HERE
     end
 
     def print_values(list_node)
